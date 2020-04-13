@@ -8,7 +8,7 @@
 
     let startTime;
 
-    function countUp {
+    function countUp() {
         console.log(Date.now() - startTime);
 
         setTimeout(() => {
