@@ -44,9 +44,8 @@
             setTimeout(() => {
                 showResult();
             },100);
+            target.textContent = 'click to replay';
         }
-
-        target.textContent = 'click to replay';
     }
 
     function showResult() {
