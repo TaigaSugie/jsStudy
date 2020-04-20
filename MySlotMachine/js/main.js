@@ -6,7 +6,7 @@
             const section = document.createElement('section');
             section.classList.add('panel');
 
-            this.img = createElement('img');
+            this.img = document.createElement('img');
             this.img.src = 'img/seven.png';
 
             this.stop = document.createElement('div');
@@ -19,6 +19,19 @@
             const main = document.querySelector('main');
             main.appendChild(section);
         }
+
+        getRandomImage() {
+            const images = [
+                'img/seven.png',
+                'img/bell.png',
+                'img/cherry.png',
+            ];
+            return images[Math.floor(Math.random() * images.length)];
+        }
+
+        spin() {
+            this.img.src = this.getRandomImage();
+        }
     }
 
     const panels = [
@@ -26,4 +39,9 @@
         new Panel(),
         new Panel(),
     ];
+
+    const spin = document.getElementById('spin');
+    spin.addEventListener('click', () => {
+        panel.spin();
+    });
 }
