@@ -42,6 +42,8 @@
 
     const spin = document.getElementById('spin');
     spin.addEventListener('click', () => {
-        panel.spin();
+        panels.forEach(panel => {
+            panel.spin();
+        });
     });
 }
