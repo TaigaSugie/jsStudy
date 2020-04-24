@@ -1,27 +1,27 @@
 body {
     background: #ccc;
     color: #fff;
-    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-family: 'Courier New', sans-serif;
     font-size: 16px;
     font-weight: bold;
-}
-
-#container {
-    width: 120px;
-    margin: 6px auto;
-}
-
-#board {
+  }
+  
+  #container {
+    /* 50px * 2 + 10px * 2 */
+    margin: 16px auto;
+  }
+  
+  #board {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0 0 8px;
     padding: 10px;
     background: #fff;
     border-radius: 4px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#board li {
+  }
+  
+  #board li {
     background: #00aaff;
     width: 40px;
     height: 40px;
@@ -31,22 +31,22 @@ body {
     line-height: 40px;
     text-align: center;
     box-shadow: 0 4px 0 #0088cc;
-}
-
-#board li.plessed {
+  }
+  
+  #board li.pressed {
     background: #ccc;
     box-shadow: none;
     margin-top: 9px;
     margin-bottom: 1px;
-}
-
-#timer {
+  }
+  
+  #timer {
     margin-bottom: 8px;
     font-size: 20px;
     text-align: right;
-}
-
-#btn {
+  }
+  
+  #btn {
     cursor: pointer;
     user-select: none;
     background: #f44336;
@@ -54,9 +54,9 @@ body {
     border-radius: 4px;
     text-align: center;
     box-shadow: 0 4px 0 #d1483e;
-}
-
-#btn:active {
+  }
+  
+  #btn:active {
     margin-top: 12px;
     box-shadow: none;
-}
+  }
