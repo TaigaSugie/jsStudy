@@ -8,13 +8,17 @@
     //     document.form.elements['checkbox2'].checked=check;
     //     document.form.elements['checkbox3'].checked=check;
     // }
-    var checkall = document.getElementById('checkall');
-    checkall.addEventListener('click', function() {
-        var checkbox = document.getElementsByName('checkbox');
-        for(i in checkbox) {
-            checkbox[i].checked = this.checked;
+    // var checkall = document.getElementById('checkboxall');
+    // checkall.addEventListener('checked', () => {
+    //     document.getElementsByName('checkbox').checkbox.addEventListener('checked');
+    // })
+    function checkboxAll() {
+        if(document.all.elements.checked){
+            document.checkbox.elements.checked = true;
+        }else {
+            document.checkbox.elements.checked = false;
         }
-    })
+    }
 }
 
 // var checkall = document.getElementById('checkall');
