@@ -12,10 +12,15 @@
     // checkall.addEventListener('checked', () => {
     //     document.getElementsByName('checkbox').checkbox.addEventListener('checked');
     // })
-    function checkboxAll() {
+    const checkAll = document.checkboxwrap.elements[0].checked;
+    // form:checkboxwrapの最初のelementに
+    checkAll() {
+        // name = allにcheckが入ってたら
         if(document.all.elements.checked){
+            // name = checkboxにcheckを入れる 
             document.checkbox.elements.checked = true;
         }else {
+            // name = checkboxのcheckを外す
             document.checkbox.elements.checked = false;
         }
     }
