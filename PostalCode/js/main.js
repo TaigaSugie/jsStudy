@@ -2,5 +2,9 @@
 {
     const first = document.getElementById('first');
     const second = document.getElementById('seccond');
-    const postNumber = [first, second];
+    const postNumber = [ first, second ];
+
+    postNumber() {
+        if()
+    }
 }
