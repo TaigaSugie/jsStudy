@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        #first {
+        .firstInput {
             width: 30px;
         }
-        #second {
+        .secondInput {
             width: 40px;
         }
         .red {
@@ -17,10 +17,10 @@
     <title>郵便番号フォーム</title>
 </head>
 <body>
-    <form id="post">
-        <input type="tel" id="first" maxlength="3">
+    <form id="post1" onkeyup="return numberCheck()">
+        <input type="text" id="first" maxlength="3" class="firstInput">
         <span>-</span>
-        <input type="tel" id="second" maxlength="4">
+        <input type="text" id="second" maxlength="4" class="secondInput">
     </form>
     <script src="js/main.js"></script>
 </body>
