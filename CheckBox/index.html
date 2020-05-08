@@ -2,27 +2,30 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        label {
+            display: block;
+        }
+    </style>
     <title>CheckBox</title>
 </head>
 <body>
     <h1>全チェックボックス</h1>
-    <form name="checkboxwrap">
+    <form id="checkboxwrap">
         <label>
             <input id="all" type="checkbox" onClick="checkAll(this)">
             All Check
         </label>
-        <label id="all">All</label>
         <label>
-            <input name="checkbox" type="checkbox">
+            <input id="checkbox" type="checkbox">
             One
         </label>
         <label>
-            <input name="checkbox" type="checkbox">
+            <input id="checkbox" type="checkbox">
             Two
         </label>
         <label>
-            <input name="checkbox" type="checkbox">
+            <input id="checkbox" type="checkbox">
             Three
         </label>
     </form>
