@@ -9,11 +9,11 @@
     const box = document.checkboxwrap.checkbox.checked;
     // もしall checkにcheckが入ったら
     function allCheck(){
-    if(All = true){
+    if(All === true){
         // 他のcheckboxにcheckを入れる
-        box.checked = true;
+        box === true;
     }else{
-        box.checked = false;
+        box === false;
     }
     }
 
