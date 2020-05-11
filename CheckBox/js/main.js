@@ -1,22 +1,31 @@
 'use strict'
 
 {
-    // formタグを読み込む
-    const wrap = document.getElementById('checkboxwrap');
     // all checkを読み込む
-    const All = document.checkboxwrap.all.checked;
+    // const allCheck = document.getElementById('all');
     // 他のcheckboxを読み込む
-    const box = document.checkboxwrap.checkbox.checked;
-    // もしall checkにcheckが入ったら
-    function allCheck(){
-    if(All === true){
-        // 他のcheckboxにcheckを入れる
-        box === true;
-    }else{
-        box === false;
-    }
-    }
+    // const boxCheck = document.getElementById('box');
+    // All checkがクリックされた時
+    // allCheck.onchange = function(){
+        // もしall checkにcheckが入ったら
+        // if(allCheck.checked){
+        //     // 他のcheckboxにcheckを入れる
+        //     alert();
+        //     boxCheck.checked;
+        // }else{
+        //     boxCheck.checked = false;
+        // }
+    // }
+    // allCheck.onchange = null;
+    document.getElementById('all').onchange = ck();
 
-    allCheck();
+    function ck(){
+    if(document.getElementById('all').checked){
+        alert();
+        document.getElementById('box').checked;
+    }else{
+        document.getElementById('box').checked = false;
+    }
+}
 }
 
