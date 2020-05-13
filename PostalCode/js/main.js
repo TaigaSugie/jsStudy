@@ -3,34 +3,34 @@
     // formタグを読み込む
    const input = document.getElementById('post1');
    // 最初のinputタグを読み込む
-   const log1 = document.getElementById('first');
+   const post1 = document.getElementsByName('postNumber')[0];
    // ２番目のinputタグを読み込む
-   const log2 = document.getElementById('second');
+   const post2 = document.getElementsByName('postNumber')[1];
 
    //　inputにkeyを押し上げたときにlogkeyを実行
    input.onkeyup = logKey;
 
     function logKey(e) {
-        // もしlog1で数字以外が押し込まれたら
-        if(log1.value.match(/[^0-9]+/)){
+        // もしpost1で数字以外が押し込まれたら
+        if(post1.value.match(/[^0-9]+/)){
             // redクラスを追加
-            first.classList.add('red');
+            post1.classList.add('red');
         // 数字が押し込まれている状態なら
         }else{
-            first.classList.remove('red');
+            post1.classList.remove('red');
         }
-        if(log2.value.match(/[^0-9]+/)){
+        if(post2.value.match(/[^0-9]+/)){
             // redクラスを追加
-            second.classList.add('red');
+            post2.classList.add('red');
         }else{
             // redクラスを取り除く
-            second.classList.remove('red');
+            post2.classList.remove('red');
         }
 
         // もしlog2で数字以外が押し込まれたらelse
         // log1で数字が3桁入力されたら
-        if(log1.value.length >= log1.maxLength){
-            second.focus();
+        if(post1.value.length >= post1.maxLength){
+            post2.focus();
         }
         // log2にfocusする
     }

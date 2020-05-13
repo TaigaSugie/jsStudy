@@ -3,21 +3,23 @@
 {
     // id=allを取得
     var ck = document.getElementById('all');
+    // name=checkBoxを取得
+    var ckBox = document.getElementsByName('checkBox');
+    // ckBoxの数を取得
+    var ckLength = ckBox.length;
 
     // allをクリック
     ck.onclick = function(){
-        // もしallにチェックが入ったら
-        if(document.getElementById('all').checked){
-            // 他のチェックボックスにチェックを入れる
-            document.getElementById('box').checked = true;
-            document.getElementById('box1').checked = true;
-            document.getElementById('box2').checked = true;
-        // allにチェックが入らなかったら
-        }else{
-            // 他のチェックボックスのチェックを抜く
-            document.getElementById('box').checked = false;
-            document.getElementById('box1').checked = false;
-            document.getElementById('box2').checked = false;
+        for(var i = 0 ; i < ckLength; i++){
+            // もしallにチェックが入ったら
+            if(ck.checked){
+                // 他のチェックボックスにチェックを入れる
+                ckBox.item(i).checked = true;
+            // allにチェックが入らなかったら
+            }else{
+                // 他のチェックボックスのチェックを抜く
+                ckBox.item(i).checked = false;
+            }
         }
     };
     // allをクリックしたらイベント発動
