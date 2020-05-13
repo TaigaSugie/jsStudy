@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        
+    #selectWrap {
+        overflow: hidden;
+        width: 90%;
+        margin: 2em auto;
+        text-align: center;
+    }
+    #selectWrap select {
+        width: 100%;
+        padding-right: 1em;
+        cursor: pointer;
+        text-indent: 0.01px;
+        text-overflow: ellipsis;
+        border: none;
+        outline: none;
+        background: transparent;
+        background-image: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    #selectWrap select::-ms-expand {
+        display: none;
+    }
+    #selectWrap.slWrap {
+        position: relative;
+        border: 1px solid #bbbbbb;
+        border-radius: 2px;
+        background: #ffffff;
+    }
+    #selectWrap.slWrap::before {
+        position: absolute;
+        top: 0.8em;
+        right: 0.9em;
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #666666;
+        pointer-events: none;
+    }
+    #selectWrap.slWrap select {
+        padding: 8px 38px 8px 8px;
+        color: #666666;
+    }
     </style>
     <title>複数セレクトボックス</title>
 </head>
 <body>
-    <select name="selectBox" id="box">
-        <option value="select1">select1</option>
-        <option value="select2">select2</option>
-        <option value="select3">select3</option>
-        <option value="select4">select4</option>
-        <option value="select5">select5</option>
-    </select>
+    <div id="selectWrap" class="slWrap">
+        <select name="selectBox" id="box">
+            <option value="" hidden></option>
+            <option value="select1">select1</option>
+            <option value="select2">select2</option>
+            <option value="select3">select3</option>
+            <option value="select4">select4</option>
+            <option value="select5">select5</option>
+        </select>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
