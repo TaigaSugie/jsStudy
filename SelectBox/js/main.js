@@ -9,14 +9,15 @@
     selectCon.onclick = function(){
         for(var i = 0; i < contentLength; i++){
             if(selectCon.selected){
+                // selectboxに表示
                 selectBox.textContent = this.value;
-            }else{
+            }
+            // バツボタンを押したら
+            if(){
                 selectBox.textContent = this.value.disabled;
             }
         }
     };
-    // selectboxに表示
-    // バツボタンを押したら
     // selectboxから消す
     selectCon.onclick();
 }
