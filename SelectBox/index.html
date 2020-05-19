@@ -9,7 +9,7 @@
         margin: 2em auto;
         text-align: center;
     }
-    #selectWrap select {
+    #selectWrap ul, #selectWrap select {
         width: 100%;
         padding-right: 1em;
         cursor: pointer;
@@ -23,7 +23,7 @@
         -webkit-appearance: none;
         appearance: none;
     }
-    #selectWrap select::-ms-expand {
+    #selectWrap ul::-ms-expand, #selectWrap select::-ms-expand {
         display: none;
     }
     #selectWrap.slWrap {
@@ -45,37 +45,29 @@
         border-top: 6px solid #666666;
         pointer-events: none;
     }
-    #selectWrap.slWrap select {
-        padding: 8px 38px 8px 8px;
+    #selectWrap.slWrap ul, #selectWrap.slWrap select {
+        padding: 0;
+        margin: 0;
         color: #666666;
-        /* width: 100px;
-        float: left;
-        background: lightgray;
-        height: auto;
-        margin: 5px; */
     }
-    /* #selectWrap.slWrap select::after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "×";
-        display: block;
-        background: darkgray;
-        color: #000;
-    } */
+    #selectWrap.slWrap ul li {
+        text-align: left;
+    }
     </style>
     <title>複数セレクトボックス</title>
 </head>
 <body>
     <div id="selectWrap" class="slWrap">
-        <select name="selectBox" id="box">
-            <option value="" hidden></option>
-            <option value="select1" name="selectContent">select1</option>
-            <option value="select2" name="selectContent">select2</option>
-            <option value="select3" name="selectContent">select3</option>
-            <option value="select4" name="selectContent">select4</option>
-            <option value="select5" name="selectContent">select5</option>
-        </select>
+        <ul id="box" name="selectBox">
+            <li name="selectContent" value=""></li>
+            <div class="listWrap" style="display: none;">
+                <li name="selectContent" value="select1">select1</li>
+                <li name="selectContent" value="select2">select2</li>
+                <li name="selectContent" value="select3">select3</li>
+                <li name="selectContent" value="select4">select4</li>
+                <li name="selectContent" value="select5">select5</li>
+            </div>
+        </ul>
     </div>
     <script src="js/main.js"></script>
 </body>
