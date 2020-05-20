@@ -22,7 +22,8 @@
     // selectCon.onclick();
 
     var box = document.getElementById('box');
-    var listWrap = document.getElementsByClassName('listWrap');
+    var listWrap = document.getElementById('listBox');
+    var choose = document.getElementsByName('selectContent');
     // listWrap.style.display = "none";
 
     box.onclick = function(){
@@ -32,4 +33,20 @@
             listWrap.style.display = 'none';
         }
     };
+
+    choose.onclick = function(){
+        for(i = 0; i <=choose.length; i++){
+            if(!choose[i].hasChildNodes[i]){
+                const div1 = document.createElement('div');
+                const text1 = document.createTextNode(i.value);
+                div1.appendChild(text1);
+                box.appendChild(div1);
+            }
+            if(div1(this).onclick){
+                div1(this).removeChild(div1(this));
+            }
+        }
+    }
+
+
 }
